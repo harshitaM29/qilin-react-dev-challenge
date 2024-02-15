@@ -1,13 +1,16 @@
-import React, { Fragment } from "react";
-
-import RegistrationForm from "./components/FormValidation/RegistrationForm";
-import SearchBar from "./components/APIFetch/SearchBar";
+import React, { Fragment, lazy, Suspense } from "react";
 import Header from "./components/Layout/Header";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Main/Home";
-import About from "./components/Main/About";
 
+const Registration = lazy(() =>
+  import("./components/FormValidation/RegistrationForm")
+);
+const SearchBar = lazy(() => import("./components/APIFetch/SearchBar"));
+const About = lazy(() => import("./components/Main/About"));
 const App = () => {
+  const renderLoader = () => <p>Loading...</p>;
+
   return (
     <Fragment>
       <Header />
@@ -16,13 +19,19 @@ const App = () => {
           <Home />
         </Route>
         <Route path="/register">
-          <RegistrationForm />
+          <Suspense fallback={renderLoader()}>
+            <Registration />
+          </Suspense>
         </Route>
         <Route path="/github">
-          <SearchBar />
+          <Suspense fallback={renderLoader()}>
+            <SearchBar />
+          </Suspense>
         </Route>
         <Route path="/about">
-          <About />
+          <Suspense fallback={renderLoader()}>
+            <About />
+          </Suspense>
         </Route>
       </Switch>
     </Fragment>
