@@ -1,0 +1,58 @@
+.searchbar {
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  text-align: center;
+}
+.searchbar input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 80%;
+}
+.searchbar button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid teal;
+  background-color: teal;
+  color: white;
+  border-radius: 6px;
+  margin-left: 0.8rem;
+}
+.container {
+  background-color: #bfbad0;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 40rem;
+  max-width: 95%;
+  border-radius: 12px;
+}
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.profile img {
+  margin-right: 1rem;
+  float: left;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ccc;
+}
+.repo {
+  display: flex;
+  align-content: flex-start;
+}
+.repo ul {
+  list-style-type: none;
+}
+
+.repo li {
+  padding: 0.8rem;
+  border-bottom: 1px solid gray;
+}

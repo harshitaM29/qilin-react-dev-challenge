@@ -121,8 +121,6 @@ const RegistrationForm = () => {
           <button type="submit">Submit</button>
         </div>
       </form>
-
-      <ul id="myList"></ul>
     </div>
   );
 };
