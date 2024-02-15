@@ -2,6 +2,8 @@ import React, { Fragment, lazy, Suspense } from "react";
 import Header from "./components/Layout/Header";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Main/Home";
+import ThemeSwitcher from "./components/ThemeSwitcher/ThemeSwitcher";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
 const Registration = lazy(() =>
   import("./components/FormValidation/RegistrationForm")
@@ -14,6 +16,9 @@ const App = () => {
   return (
     <Fragment>
       <Header />
+      <ThemeContextProvider>
+        <ThemeSwitcher />
+      </ThemeContextProvider>
       <Switch>
         <Route path="/" exact>
           <Home />

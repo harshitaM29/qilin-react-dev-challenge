@@ -1,0 +1,11 @@
+.themeParent button {
+  display: flex;
+  float: right;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  padding: 0.6rem;
+  border: 1px solid teal;
+  background-color: teal;
+  color: white;
+  border-radius: 2px;
+}
