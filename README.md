@@ -1,52 +1,17 @@
 # Qilin Software Lab - Junior React Developer Pre-Assessment
 
-Welcome to the Junior React Developer pre-assessment for Qilin Software Lab. This assessment is designed to evaluate your React.js skills. Please follow the instructions below to complete the assessment.
-
-## Task Overview
-
-### 1. Form Validation (File: RegistrationForm.js)
-
-Create a React component named RegistrationForm that includes a form for user registration. Implement form validation to ensure that the user enters a valid email address, a password with at least 8 characters, and a matching password confirmation. Provide appropriate error messages.
-
-### 2. API Integration and Display (File: GitHubUser.js)
-
-Build a React component named GitHubUser that takes a GitHub username as a prop and fetches the user's information from the GitHub API. Display the user's profile picture, username, and a list of repositories. Handle loading and error states gracefully.
-
-### 3. Context API for Theme (File: ThemeSwitcher.js)
-
-Implement a theme-switching feature using the Context API. Create a ThemeContext that manages the current theme (light or dark). Build two child components, LightTheme and DarkTheme, that display content differently based on the selected theme. Include a button in a parent component to toggle between themes.
-
-### 4. Higher-Order Component (HOC) (File: Logger.js)
-
-Develop a higher-order component named `Logger` that logs the lifecycle methods of a wrapped component. Wrap a simple component with the `Logger` HOC and observe the lifecycle events in the console.
-
-### 5. Routing and Lazy Loading (Files: App.js, Home.js, About.js)
-
-Set up a React application with routing and lazy loading for optimized performance. Create two pages, `Home` and `About`, and use React Router to navigate between them.
-
 ## Getting Started
 
-1. Fork this repository to your GitHub account.
-2. Clone the forked repository to your local machine.
-3. Navigate to the project directory: `cd Qilin-React-Dev-Challenge`.
-4. Install dependencies: `npm install` or `yarn install`.
+Install dependencies: `npm install` or `yarn install`.
 
-## Task Implementation
+## Code Explanation
 
-1. Open each respective file (`RegistrationForm.js`, `GitHubUser.js`, `ThemeSwitcher.js`, `Logger.js`, `App.js`, `Home.js`, `About.js`).
-2. Implement the required tasks in each file as per the provided instructions.
-3. Ensure that your code is clean, organized, and follows React best practices.
-4. Test your components thoroughly to ensure correctness.
+1. App.js file contains logic for routing and lay loading which is a technique for boosting performance of React app. Suspense component is used and it is wrapped around component which is lazy loaded and it is used to show fallback UI till the actual component is loaded. Navigate through the tabs for code implementation and results of given tasks.
 
-## Submission
+2. RegistrationForm.js contains logic for form validation. Using function customizable errors are thrown. RegistrationForm is a controlled component meaning that its values are handled by React states.
 
-1. Commit and push your changes to your GitHub repository.
-2. Share the repository link with the Qilin Software Lab hiring team within 48hrs after receiving this assessment.
-3. Include a README.md file in your repository with any additional notes or explanations about your code.
+3. GitHubUser.js contains logic for fetching user's github information through API. GitHubUser gets username from SearchBar component which contains logic for search bar and getting username from user. Based on received props i.e, username we can dynamically fetched data of different users. Here custom hook is being used as for getting list of repos we have to again call api and its logic is same. For reducing redundanant code and to implement reusability custom hook is created which return data and error.
 
-Good luck! If you have any questions or need clarification, feel free to reach out.
+4. ThemeContext is created for showing implementation of context API. Context API is used to avoid prop drilling which occurs when two siblings or deeply nested component wants to share data. Based on value of theme simple text is being displayed.
 
-Best regards,
-Himanshu Barmola
-Frontend Tech Lead,
-Qilin Software Lab
+5. Higher Order Component Logger.js is created to observe lifecycle method of wrapped component. A very simple component is created. Functional component doesn't have lifecycle methods instead React hooks are used. Tracking of lifecycle of wrapped component is implemented using both class component as well as functional component.
