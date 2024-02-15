@@ -1,0 +1,19 @@
+.navBar {
+  display: flex;
+  background-color: #111111;
+  padding: 1%;
+}
+.home {
+  margin-right: 1rem;
+}
+.register {
+  margin-right: 1rem;
+}
+
+.user {
+  margin-right: 1rem;
+}
+
+.about {
+  margin-right: 1rem;
+}
