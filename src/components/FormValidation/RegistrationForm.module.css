@@ -1,0 +1,47 @@
+.registrationForm {
+  background-color: #bfbad0;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+}
+.registrationForm__controls {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.registrationForm__controls label {
+  font-weight: bold;
+  display: block;
+}
+
+.registrationForm__controls input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 50rem;
+  max-width: 100%;
+}
+
+.registrationForm__controls span {
+  color: red;
+}
+
+.registrationForm__actions {
+  text-align: right;
+}
+.registrationForm button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid teal;
+  background-color: teal;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
