@@ -1,8 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import classes from "./GitHubUser.module.css";
 import useFetchedData from "./useFetchedData";
 
 const GitHubUser = ({ username }) => {
+  //created custom hook for avoiding repetitive code writing for same logic
   const { data, error } = useFetchedData(
     `https://api.github.com/users/${username}`
   );

@@ -5,6 +5,7 @@ import LightTheme from "./LightTheme";
 import DarkTheme from "./DarkTheme";
 
 const ThemeSwitcher = () => {
+  //consuming context API using react hooks
   const { theme, switchTheme } = useContext(ThemeContext);
 
   const handleThemeSwitch = () => {

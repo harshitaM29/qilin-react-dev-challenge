@@ -54,6 +54,7 @@ const RegistrationForm = () => {
     }
   };
 
+  //function for checking errors and creating customize error messages
   const validationErrors = (enteredData) => {
     let errors = {};
 

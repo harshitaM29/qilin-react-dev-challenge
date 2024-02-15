@@ -1,7 +1,8 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./Header.module.css";
 
+//navigation bar logic
 const Header = () => {
   return (
     <div className={classes.navBar}>

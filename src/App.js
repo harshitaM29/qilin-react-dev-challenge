@@ -4,7 +4,9 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./components/Main/Home";
 import ThemeSwitcher from "./components/ThemeSwitcher/ThemeSwitcher";
 import { ThemeContextProvider } from "./context/ThemeContext";
+import SimpleComponent from "./components/Logger/SimpleComponent";
 
+//lazy loading for ensuring better performance of the app
 const Registration = lazy(() =>
   import("./components/FormValidation/RegistrationForm")
 );
@@ -19,6 +21,7 @@ const App = () => {
       <ThemeContextProvider>
         <ThemeSwitcher />
       </ThemeContextProvider>
+      {/* Switch component for ensuring rendering of component only when path is matched */}
       <Switch>
         <Route path="/" exact>
           <Home />
@@ -39,6 +42,7 @@ const App = () => {
           </Suspense>
         </Route>
       </Switch>
+      <SimpleComponent />
     </Fragment>
   );
 };
